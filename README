@@ -1,0 +1,13 @@
+Run Makefile to combine benchmarks into one file.
+
+Run `make rhino` or `make mug` to append the Rhino or Mug test runner.
+
+Rhino can't handle real big files, so run only a few benchmarks by deleting
+lines from FILES in the Makefile.  Don't delete base.js.
+
+Ex:
+
+make rhino
+cd bin
+java -cp path/to/rhino.jar org.mozilla.javascript.tools.jsc.Main v8marks_rhino.js
+java -cp path/to/rhino.jar:. v8marks_rhino
